@@ -9,7 +9,10 @@ const HomeScreen = () => {
       <div className="row">
         {products.map((product) => {
           return (
-            <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch">
+            <div
+              key={product._id}
+              className="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch"
+            >
               <Product product={product}></Product>
             </div>
           );
