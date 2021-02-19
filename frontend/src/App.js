@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import HomeScreen from "./screens/HomeScreen";
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       <Header></Header>
       <main className="py-3">
         <div className="container">
-          <h1>Hello World</h1>
+          <HomeScreen></HomeScreen>
         </div>
       </main>
       <Footer></Footer>
