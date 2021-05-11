@@ -45,16 +45,14 @@ const OrderPage = ({ match, history }) => {
   const { userInfo } = useSelector((state) => state.userLogin);
 
   const { success } = useSelector((state) => state.orderPay);
-  const {
-    success: orderDeliverSuccess,
-    loading: orderDeliverLoading,
-  } = useSelector((state) => state.orderDeliver);
+  const { success: orderDeliverSuccess, loading: orderDeliverLoading } =
+    useSelector((state) => state.orderDeliver);
 
   const stripe = useStripe();
   const elements = useElements();
 
   useEffect(() => {
-    if (userInfo) {
+    if (!userInfo) {
       history.push('/login');
     }
     if (!order || order._id !== orderId || success || orderDeliverSuccess) {

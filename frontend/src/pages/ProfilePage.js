@@ -155,7 +155,11 @@ const ProfilePage = ({ history }) => {
                         order.paidAt.slice(0, 10)
                       ) : (
                         <i
-                          style={{ color: 'red' }}
+                          style={{
+                            color: 'red',
+                            display: 'flex',
+                            justifyContent: 'center',
+                          }}
                           className='fas fa-times'
                         ></i>
                       )}

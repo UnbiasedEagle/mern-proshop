@@ -19,6 +19,7 @@ const Header = () => {
     dispatch({ type: UserActionTypes.USER_DETAILS_RESET });
     dispatch({ type: OrderActionsTypes.ORDER_LIST_MY_RESET });
     dispatch({ type: UserActionTypes.USER_LIST_RESET });
+    history.push('/login');
   };
 
   return (
