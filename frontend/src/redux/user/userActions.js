@@ -225,6 +225,5 @@ export const logout = () => {
     localStorage.removeItem('cartItems');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
-    document.location.href = '/login';
   };
 };

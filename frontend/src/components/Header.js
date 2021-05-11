@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/user/userActions';
@@ -8,6 +9,8 @@ import SearchBox from './SearchBox';
 
 const Header = () => {
   const { userInfo } = useSelector((state) => state.userLogin);
+
+  const history = useHistory();
 
   const dispatch = useDispatch();
 
