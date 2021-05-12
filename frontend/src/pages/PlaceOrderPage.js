@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Message from '../components/Message';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../redux/order/orderActions';
+import { CartActionTypes } from '../redux/cart/types';
+import { OrderActionsTypes } from '../redux/order/types';
 
 const PlaceOrderPage = ({ history }) => {
   const dispatch = useDispatch();
@@ -19,6 +21,9 @@ const PlaceOrderPage = ({ history }) => {
   useEffect(() => {
     if (success) {
       history.push(`/order/${order._id}`);
+      dispatch({ type: CartActionTypes.CART_CLEAR });
+      dispatch({ type: OrderActionsTypes.ORDER_CREATE_RESET });
+      localStorage.removeItem('cartItems');
     }
     // eslint-disable-next-line
   }, [success, history]);

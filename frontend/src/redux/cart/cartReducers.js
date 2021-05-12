@@ -40,6 +40,8 @@ export const cartReducer = (
         ...state,
         paymentMethod: action.payload,
       };
+    case CartActionTypes.CART_CLEAR:
+      return { ...state, cartItems: [] };
     default:
       return state;
   }
