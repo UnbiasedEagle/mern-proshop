@@ -160,7 +160,7 @@ const OrderPage = ({ match, history }) => {
               </p>
               {order.isDelivered ? (
                 <Message variant='success'>
-                  Paid on {order.deliveredAt.slice(0, 10)}
+                  Delivered on {order.deliveredAt.slice(0, 10)}
                 </Message>
               ) : (
                 <Message variant='danger'>Not Delivered</Message>
